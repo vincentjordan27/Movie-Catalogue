@@ -1,2 +1,3 @@
 # Movie Catalogue
- Movie Catalogue using Jetpack Component
+
+ Android Movie Catalogue App using Kotlin Programming Language and Jetpack Component.
