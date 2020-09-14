@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swp"
+    tools:context=".ui.detail.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.jgabrielfreitas.core.BlurImageView
+                android:id="@+id/img_detail_blur"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                tools:src="@drawable/poster_creed"
+                android:scaleType="fitXY"
+                app:radius="24"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/img_detail"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                tools:src="@drawable/poster_creed"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/img_detail"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="#f2f2f0"
+                android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ProgressBar
+                            android:id="@+id/prog_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"/>
+
+                        <TextView
+                            android:id="@+id/detail_title"
+                            android:textStyle="bold"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="8dp"
+                            tools:text="CREED"
+                            android:textColor="#11263C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:textSize="25sp" />
+
+
+                        <LinearLayout
+                            android:layout_below="@id/detail_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal">
+
+                               <TextView
+                                   android:layout_weight="1"
+                                   android:id="@+id/detail_release"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginStart="16dp"
+                                   android:layout_marginTop="16dp"
+                                   android:layout_marginBottom="20dp"
+                                   tools:text="2019"
+                                   android:textColor="#63717F"
+                                   android:textSize="16sp" />
+
+                               <TextView
+                                   android:layout_weight="1"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"/>
+
+                               <TextView
+                                   android:layout_weight="1"
+                                   android:id="@+id/detail_vote"
+                                   android:layout_width="0dp"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginTop="16dp"
+                                   android:layout_marginEnd="16dp"
+                                   android:layout_marginBottom="20dp"
+                                   android:fontFamily="sans-serif-black"
+                                   android:gravity="end"
+                                   tools:text="9.0"
+                                   android:textColor="@android:color/black"
+                                   android:textSize="25sp"
+                                   android:textStyle="bold" />
+
+                           </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/detail_overview"
+                                android:fontFamily="sans-serif-light"
+                                android:textSize="20sp"
+                                android:textColor="#63717F"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:text="Danny Rand resurfaces 15 years after being presumed dead. Now, with the power of the Iron Fist, he seeks to reclaim his past and fulfill his destiny."
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginStart="16dp" />
+
+
+
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_fav"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@id/img_detail"
+                android:layout_alignParentEnd="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_favorite"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
